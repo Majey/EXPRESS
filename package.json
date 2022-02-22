@@ -1,0 +1,23 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "Basic express tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Majey/EXPRESS.git"
+  },
+  "author": "MAJENGO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Majey/EXPRESS/issues"
+  },
+  "homepage": "https://github.com/Majey/EXPRESS#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
