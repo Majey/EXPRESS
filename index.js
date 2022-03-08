@@ -18,8 +18,16 @@ app.get("/student", (req, res) => {
         subjects: [ "Math", "Science", "GHC"],
         subjects2: [ "Math", "Physics", "Geograpgy"],
     }
-    res.render("student", {student});
-})
+    res.render("pages/student", {student});
+});
+
+app.get("/", (req, res) => {
+    res.render("pages/home");
+});
+
+app.get("/contacts", (req, res) => {
+    res.render("pages/contacts");
+});
 
 
 
