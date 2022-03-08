@@ -11,5 +11,21 @@
     <h3>Name: <%= student.name %></h3>
     <h3>Email: <%= student.email %></h3>
     <h3>Age: <%= student.age %> years old</h3>
+    <h3>Subjects studied are:</h3>
+    <% if (student.age > 18 ) { %>
+        <% student.subjects2.forEach(subject => { %>
+            <li>
+                <%= subject %>
+            </li>
+        <% }) %>
+
+    <% } else { %>
+        <% student.subjects.forEach(subject => { %>
+            <li>
+                <%= subject %>
+            </li>
+        <%})%>
+
+    <% } %>
 </body>
 </html>

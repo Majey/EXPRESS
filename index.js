@@ -14,7 +14,9 @@ app.get("/student", (req, res) => {
     const student = {
         name: "Kevin Erick",
         email: "kevinerick@yahoo.com",
-        age: 30
+        age: 19,
+        subjects: [ "Math", "Science", "GHC"],
+        subjects2: [ "Math", "Physics", "Geograpgy"],
     }
     res.render("student", {student});
 })
