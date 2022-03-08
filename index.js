@@ -1,11 +1,27 @@
 const express = require("express");
-const path = require("path");
+// const path = require("path");
 
-const publicPath = path.join(__dirname, `public`);
-console.log(publicPath);
+// const publicPath = path.join(__dirname, `public`);
+// console.log(publicPath);
 
 // express app
 const app = express();
+
+// register view engine
+app.set("view engine", `ejs`);
+
+app.get("/student", (req, res) => {
+    const student = {
+        name: "Kevin Erick",
+        email: "kevinerick@yahoo.com",
+        age: 30
+    }
+    res.render("student", {student});
+})
+
+
+
+/*
 
 app.get("/", (req, res) => {
     // res.send(`Hello, welcome!. My name is ${req.query.name} and I am ${req.query.age} years old`);
@@ -22,4 +38,7 @@ app.get("/about", (req, res) => {
     res.sendFile(`${publicPath}/about.html`);
 })
 
+*/
+
 app.listen(3000);
+
