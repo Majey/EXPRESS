@@ -7,10 +7,24 @@ const express = require("express");
 // express app
 const app = express();
 
+// middleware
+const MW = (req, res, next) => {
+    if (!req.query.age) {
+        res.send("Kindly provide age");
+    } else if (!req.query.age < 18) {
+        res.send("Come back when you are an adult");
+    } else {
+        next();
+    };   
+};
+
+app.use(MW);
+
 // register view engine
 app.set("view engine", `ejs`);
 
 app.get("/student", (req, res) => {
+    
     const student = {
         name: "Kevin Erick",
         email: "kevinerick@yahoo.com",
